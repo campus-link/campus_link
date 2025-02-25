@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: rgb(166, 29, 55);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo-text {
+            font-style: italic;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px;
+            display: block;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown-content hr {
+            margin: 5px 0;
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: rgb(166, 29, 55);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .close {
+            color: white;
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .login-register-btn, .features-btn, .about-btn {
+            background-color: rgb(26, 40, 68) !important;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+        .login-register-btn:hover, .features-btn:hover, .about-btn:hover {
+            transform: scale(1.05);
+        }
+        .modal button {
+            background-color: rgb(26, 40, 68);
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 12px;
+            transition: transform 0.2s;
+        }
+        .modal button:hover {
+            transform: scale(1.05);
+        }
+        .forgot-password {
+            display: block;
+            margin-top: 12px;
+            color: white;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span class="logo-text">CampusLink</span>
+        </div>
+        <div class="menu">
+            <button class="features-btn">Features</button>
+            <button class="about-btn">About Us</button>
+            <div class="dropdown">
+                <button class="login-register-btn">Login/Register ▼</button>
+                <div class="dropdown-content">
+                    <a onclick="openModal('Student')">Login as Student</a>
+                    <a onclick="openModal('Teacher')">Login as Teacher</a>
+                    <a onclick="openModal('HR')">Login as HR</a>
+                    <hr>
+                    <a onclick="openModal('Admin')">Login as Admin</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p>Enter your credentials to login.</p>
+            <input type="text" placeholder="Username" style="width: 90%; padding: 10px; margin: 12px 0; border-radius: 5px; border: none;">
+            <input type="password" placeholder="Password" style="width: 90%; padding: 10px; margin: 12px 0; border-radius: 5px; border: none;">
+            <button onclick="closeModal()">Login</button>
+            <span class="forgot-password" onclick="alert('Redirecting to forgot password page')">Forgot Password?</span>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(role) {
+            document.getElementById("modal-title").innerText = "Login as " + role;
+            document.getElementById("loginModal").style.display = "flex";
+        }
+        function closeModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
