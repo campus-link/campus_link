@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+       
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(56, 56, 136, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: #A61D37;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: red;
+        }
+        .modal input[type=text], .modal input[type=password] {
+            width: 90%;
+            padding: 12px;
+            margin: 8px 5%;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .modal button {
+            background-color: #1A2844;
+            color: white;
+            padding: 14px;
+            margin: 8px 5%;
+            border: none;
+            cursor: pointer;
+            width: 90%;
+            font-size: 20px;
+        }
+        .modal button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<!-- <body background="../background1.png"> -->
+    
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(26, 40, 68);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">CampusLink</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto"></ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown me-4">
+                        <a class="btn dropdown-toggle" style="background-color: #A61D37; color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login/Register
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="openModal(event)">Login as Student</a></li>
+                            <li><a class="dropdown-item" href="#">Login as Teacher</a></li>
+                            <li><a class="dropdown-item" href="#">Login as HR</a></li>
+                            <li style="height: 3px; background-color: #A61D37; margin: 5px 0;"></li>
+                            <li><a class="dropdown-item" href="#">Register Now</a></li>
+                            <li><a class="dropdown-item" href="#">Admin Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="modal-wrapper" class="modal">
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h1 style="text-align:center; color: white;">Student Login Page</h1>
+            </div>
+            <div class="container">
+                <input type="text" placeholder="Enter Username" name="uname">
+                <input type="password" placeholder="Enter Password" name="psw">
+                <button type="submit">Login</button>
+                <input type="checkbox" style="margin:26px 30px;">
+                <label for="remember" style="color: white;">Remember me</label>
+                <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px; color: white;">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function openModal(event) {
+            event.preventDefault(); 
+            document.getElementById('modal-wrapper').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('modal-wrapper').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal-wrapper')) {
+                closeModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
