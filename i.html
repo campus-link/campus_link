@@ -27,15 +27,20 @@
         .logo img {
             height: 50px;
             margin-right: 10px;
+            border-radius: 15px; /* Makes the logo rounder */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow */
         }
         .logo-text {
             font-style: italic;
             font-size: 24px;
             font-weight: bold;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow */
         }
         .menu {
             display: flex;
             gap: 20px;
+            align-items: center;
+            position: relative;
         }
         .dropdown {
             position: relative;
@@ -44,13 +49,17 @@
         .dropdown-content {
             display: none;
             position: absolute;
+            left: 60%;
+            transform: translateX(-60%) ;
             background-color: white;
             color: black;
             min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
             border-radius: 8px;
             overflow: hidden;
+            z-index: 1000;
         }
+        
         .dropdown-content a {
             color: black;
             padding: 12px;
@@ -89,7 +98,7 @@
             border-radius: 10px;
             text-align: center;
             width: 350px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
         }
         .close {
             color: white;
