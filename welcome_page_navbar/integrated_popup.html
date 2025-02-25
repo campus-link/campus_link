@@ -61,6 +61,10 @@
         .modal button:hover {
             opacity: 0.8;
         }
+        .dropdown-item:focus, .dropdown-item:hover {
+            background-color: #A61D37 !important;
+            color: white !important;
+        }
     </style>
 </head>
 <!-- <body background="../background1.png"> -->
@@ -74,6 +78,18 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto"></ul>
                 <ul class="navbar-nav">
+                    <li class="nav-item  me-4">
+                        <a class="btn " style="background-color: #A61D37; color: white;" href="#"  aria-expanded="false">
+                            About Us
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item  me-4">
+                        <a class="btn " style="background-color: #A61D37; color: white;" href="#"  aria-expanded="false">
+                            Features
+                        </a>
+                        
+                    </li>
                     <li class="nav-item dropdown me-4">
                         <a class="btn dropdown-toggle" style="background-color: #A61D37; color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Login/Register
@@ -87,6 +103,7 @@
                             <li><a class="dropdown-item" href="#">Admin Login</a></li>
                         </ul>
                     </li>
+                    
                 </ul>
             </div>
         </div>
