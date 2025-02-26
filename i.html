@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusLink</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -27,14 +29,7 @@
         .logo img {
             height: 50px;
             margin-right: 10px;
-            border-radius: 15px; /* Makes the logo rounder */
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow */
-        }
-        .logo-text {
-            font-style: italic;
-            font-size: 24px;
-            font-weight: bold;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+            /* border-radius: 15px; */
         }
         .menu {
             display: flex;
@@ -42,43 +37,83 @@
             align-items: center;
             position: relative;
         }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
         .dropdown {
             position: relative;
             display: inline-block;
+            cursor: pointer;
         }
         .dropdown-content {
             display: none;
             position: absolute;
-            left: 60%;
-            transform: translateX(-60%) ;
+            left: 80%;
+            transform: translateX(-80%);
             background-color: white;
             color: black;
-            min-width: 200px;
+            min-width: 220px;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
             border-radius: 8px;
             overflow: hidden;
             z-index: 1000;
         }
-        
         .dropdown-content a {
             color: black;
             padding: 12px;
             display: block;
             text-decoration: none;
             transition: background 0.3s;
+            font-weight: 500;
         }
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
-        .dropdown-content hr {
-            margin: 5px 0;
-            border: none;
-            height: 1px;
-            background-color: #ccc;
-        }
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .login-register-btn, .features-btn, .about-btn {
+            background-color: rgb(26, 40, 68);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+        .login-register-btn:hover, .features-btn:hover, .about-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width: 1000px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: rgb(166, 29, 55);
+                padding: 10px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .menu.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -106,19 +141,6 @@
             font-size: 24px;
             cursor: pointer;
         }
-        .login-register-btn, .features-btn, .about-btn {
-            background-color: rgb(26, 40, 68) !important;
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: transform 0.2s;
-        }
-        .login-register-btn:hover, .features-btn:hover, .about-btn:hover {
-            transform: scale(1.05);
-        }
         .modal button {
             background-color: rgb(26, 40, 68);
             color: white;
@@ -132,20 +154,17 @@
         .modal button:hover {
             transform: scale(1.05);
         }
-        .forgot-password {
-            display: block;
-            margin-top: 12px;
-            color: white;
-            text-decoration: underline;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="Logo">
-            <span class="logo-text">CampusLink</span>
+            <img src="logo4-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
         <div class="menu">
             <button class="features-btn">Features</button>
@@ -172,11 +191,13 @@
             <input type="text" placeholder="Username" style="width: 90%; padding: 10px; margin: 12px 0; border-radius: 5px; border: none;">
             <input type="password" placeholder="Password" style="width: 90%; padding: 10px; margin: 12px 0; border-radius: 5px; border: none;">
             <button onclick="closeModal()">Login</button>
-            <span class="forgot-password" onclick="alert('Redirecting to forgot password page')">Forgot Password?</span>
         </div>
     </div>
     
     <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
         function openModal(role) {
             document.getElementById("modal-title").innerText = "Login as " + role;
             document.getElementById("loginModal").style.display = "flex";
