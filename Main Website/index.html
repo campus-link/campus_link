@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink</title>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/logo.png " type="jpeg">
+
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--fafa-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar fixed-top bg-light navbar-expand-md header navbar-light " style="width: 100%;" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/logo.png" style="width: 80%;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav bar ms-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link act active" href="#">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#team-section">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Features</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Login/Register
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Student Login</a></li>
+                            <li><a class="dropdown-item" href="#">Teacher Login</a></li>
+                            <li><a class="dropdown-item" href="#form">Student Register</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- first sliding section -->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active xyz">
+                <img src="assets/slide1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption xy ">
+                    <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+                    <h1> Resource Hub for Campus</h1>
+                    <p>Seamless sharing of study materials, notes, and academic resources.</p>
+                    <a href=""><button type="button" class="btn read btn-primary btn-lg ">Read More</button></a>
+
+                </div>
+            </div>
+            <div class="carousel-item xyz">
+                <img src="assets/slide2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption xy ">
+                    <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+                    <h1>Unified Placement Portal</h1>
+                    <p>All job and internship opportunities in one centralized place.</p>
+                    <a href=""><button type="button" class="btn read btn-primary btn-lg ">Read More</button></a>
+
+                </div>
+            </div>
+            <div class="carousel-item xyz">
+                <img src="assets/slide3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption xy ">
+                    <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+                    <h1>Enhanced Privacy & Security</h1>
+                    <p>Your personal data remains confidential—only you can access your details.</p>
+                    <a href=""><button type="button" class="btn read btn-primary btn-lg ">Read More</button></a>
+
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev" style="z-index: 999;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next" style="z-index: 999;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- welcome -->
+
+    <div class="container welcome">
+        <div class="row mb-4">
+            <h1 class="center">Welcome To CampusLink</h1>
+            <p class="jko">Your Campus, Your Career, Connected.</p><br>
+            <p class="lj mb-4"><strong>CampusLink</strong> is your all-in-one platform for seamless learning and career
+                growth. Connect with tutors,
+                access study materials, and engage in real-time discussions through our interactive classroom
+                resource-sharing system. Stay ahead with live chat support for doubt resolution and explore job
+                opportunities through our placement cell, where companies post openings .
+                Designed for students, tutors, and recruiters, CampusLink bridges the gap between education and
+                employment.</p>
+        </div>
+    </div>
+
+
+    <!-- What we do -->
+
+    <section class="home-three-choose">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 col-lg-6 text-center">
+                    <h2 class="home-three-subtitle">What We Do </h2>
+                </div>
+            </div>
+
+            <div class="row align-items-center align-items-lg-start">
+                <div class="col-md-4 col-lg-3">
+
+                    <div class="choose-item-3 text-center text-md-end">
+                        <p>
+                            <i class="fa fa-star" style="    color: rgb(166, 29, 55);
+                            font-size: 18px;"></i> &nbsp;
+                            <span>Classroom Resource Sharing </span> Easily upload and access notes.
+                        </p>
+                    </div>
+
+                    <div class="choose-item-3 text-center text-md-end">
+                        <p>
+                            <i class="fa fa-star" style=" color: rgb(166, 29, 55);
+                            font-size: 18px;"></i> &nbsp;<span> Student Chat </span> Engage in real-time discussions,
+                            ask doubts.
+                        </p>
+                    </div>
+                    <div class="choose-item-3 text-center text-md-end">
+
+                        <p>
+                            <i class="fa fa-star" style="    color: rgb(166, 29, 55);
+                            font-size: 18px;"></i> &nbsp;
+                            <span>Placement Hub</span> Stay updated on job postings.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-6 text-center img-fluid  d-md-block d-none">
+                    <img src="assets/about.png" class="img-fluid">
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+
+                    <div class="choose-item-3 text-center text-md-start">
+
+
+                        <p>
+                            <i class="fa fa-star" style="    color: rgb(166, 29, 55);
+                            font-size: 18px;"></i> &nbsp; <span>Job Chat</span> Connect with recruiters, discuss job
+                            opportunities, and get placement insights.
+                        </p>
+                    </div>
+                    <div class="choose-item-3 text-center text-md-start">
+
+
+                        <p>
+                            <i class="fa fa-star" style="    color: rgb(166, 29, 55);
+                            font-size: 18px;"></i> &nbsp; <span>Seamless Connectivity</span>
+                            A centralized hub for students, tutors, and recruiters to interact
+                            efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- form -->
+
+    <section id="form">
+        <div class="contact">
+            <div class="container reg">
+                <div class="row">
+
+                    <div class="col-lg-7 col-md-6  col-sm-12">
+
+                        <div class="col-md-4 col-lg-6 text-center img-fluid  d-md-block d-none">
+                            <img src="assets/try.png" class="img-fluid">
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-5 col-md-6  col-sm-12">
+                        <div class="heading">
+                            <h3 class="mb-2">Register Now</h3>
+
+                        </div>
+                        <div class="contact-form-area m-top-30">
+
+                            <form action="" class="contact_from" id="contact_from">
+                                <div class="row">
+                                    <div class="col-lg-12 axyz col-md-12 col-sm-12 ">
+                                        <label class="font-weight" for="fname">Name:</label><br>
+                                        <input type="text" name="name" placeholder="Name" style=" height: 50px;
+                                    width: 100%;" id="contact_name">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4 ">
+                                        <label class="font-weight" for="number">Your Phone:</label>
+                                        <input type="tel" name="number" placeholder="Number" style=" height: 50px;
+                                    width: 100%;" id="contact_number">
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4 ">
+                                        <label class="font-weight" for="subject">Subject:</label>
+                                        <input type="text" name="subject" placeholder="Subject" style=" height: 50px;
+                                    width: 100%;" id="contact_subject">
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4 ">
+                                        <label class="font-weight" for="subject">Email:</label>
+                                        <input type="email" name="subject" placeholder="Email" style=" height: 50px;
+                                    width: 100%;" id="contact_subject">
+
+                                    </div>
+
+
+                                    <div class=" col-lg-12 col-md-12 col-sm-12  mt-4 ">
+
+                                        <div class="btn-two-outer1 "><button class="btn "
+                                                style="height: 50px; width: 100%; " type="submit"
+                                                name="submit-form"><span class="txt">submit </span> </button>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                        </div>
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- our heros -->
+    <section id="team-section">
+        <div class="container">
+            <div class="title">
+                <h2>Meet Our Heroes</h2>
+                <h6 class="d-none d-md-block">A team of dedicated professionals committed to excellence and innovation.
+                </h6>
+            </div>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="assets/aniket.jpg" alt="Subham Panda">
+                        <div class="overlay">
+                            <h3>Subham Panda</h3>
+                            <p>Team Leader</p>
+                            <p>Team Member</p>
+                            <div class="social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="assets/sahil.jpeg" alt="Subham Panda">
+                        <div class="overlay">
+                            <h3>Subham Panda</h3>
+                            <p>Team Leader</p>
+                            <p>Team Member</p>
+                            <div class="social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="assets/Subrat.jpeg" alt="Subham Panda">
+                        <div class="overlay">
+                            <h3>Subham Panda</h3>
+                            <p>Team Leader</p>
+                            <p>Team Member</p>
+                            <div class="social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="assets/subham.jpg" alt="Subham Panda">
+                        <div class="overlay">
+                            <h3>Subham Panda</h3>
+                            <p>Team Leader</p>
+                            <p>Team Member</p>
+                            <div class="social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="assets/subham.jpg" alt="Subham Panda">
+                        <div class="overlay">
+                            <h3>Subham Panda</h3>
+                            <p>Team Leader</p>
+                            <p>Team Member</p>
+                            <div class="social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="container ns-2">
+            <div class="row qs-1">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="assets/logo.png" class="img-fluid" style="width: 30%;">
+                    <div class="text my-4">CampusLink is a dynamic platform that combines classroom resource sharing,
+                        placement updates, tutor-student interaction, and seamless communication, ensuring efficient
+                        learning and career growth for students and institutions.
+                    </div>
+                    <div class="social-links">
+                        <span>Follow on Socials </span><br>
+                        <a href="#" target="_blank" class="fa fa-facebook"></a>
+                        <a href="#" target="_blank" class="fa fa-twitter"></a>
+                        <a href="#" target="_blank" class="fa fa-instagram"></a>
+                        <a href="#" target="_blank" class="fa fa-youtube"></a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 xyz1 col-md-6 col-sm-12">
+                    <h4 class="head pb-3">Useful Links</h4>
+                    <ul class="nav flex-column service">
+                        <li class="nav-items my-4"><a href="index.html" class="nav-link p-0 text-light">Home</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="#" class="nav-link p-0 text-light">Abou
+                                Us</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="#" class="nav-link p-0 text-light">Our
+                                Features</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="#" class="nav-link p-0 text-light">Login</a>
+                        </li>
+
+                        <li class="nav-items mb-4"><a href="#" class="nav-link p-0 text-light">Register Now</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h4 class="head pb-3">Our Services</h4>
+                    <ul class="nav flex-column service">
+                        <li class="nav-items my-4"><a href="#" class="nav-link p-0 text-light">Resource Hub for Campus</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="" class="nav-link p-0 text-light">Unified Placement Portal</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="" class="nav-link p-0 text-light">Enhanced Privacy & Security</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="" class="nav-link p-0 text-light">Interactive Chat Systems</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="" class="nav-link p-0 text-light">Private Study Material Acces</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h4 class="head pb-3">Contact</h4>
+                    <ul class="nav flex-column ">
+                        <li class="nav-items my-4 contactnumber"><a href="#" class="nav-link p-0 text-light"><i
+                                    class="fa fa-phone pe-3"></i>9999009999 / 9990009999</a>
+                        </li>
+                        <li class="nav-items mb-4"><a href="#" class="nav-link p-0 text-light"><i
+                                    class="fa fa-envelope pe-3"></i>campuslink@gmail.com</a>
+                        </li>
+                        <li class="nav-items lh-lg mb-3"><a href="#" class="nav-link p-0 text-light"><i class="fa fa-map-marker pe-3"></i>Utkal University VaniVihar,
+                                Bhubaneswar, Odisha 751004</a>
+                        </li>
+                        <li class="nav-items img-fluid"><a href="#" class="nav-link p-0 text-light">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.9484378614206!2d85.83737257478612!3d20.3024012811713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f2fb8416b5%3A0xf04a450cccd03186!2sUtkal%20University!5e0!3m2!1sen!2sin!4v1740851087302!5m2!1sen!2sin"
+                                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer end -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 bottom">
+                    <p class="text-light text-center ">© Copyright Design Development By <span
+                            class="noo">Aniket, Sahil, Subham, Sidharat & Subrat</span>
+                    </p>
+                    <div class="up">
+                        <a href="#"> <span><i class="fa fa-angle-up" style="color: red;"></i></span></a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let navbarHidden = false;
+
+    window.addEventListener("scroll", function () { // Listen for the scroll event
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the current vertical scroll position
+
+        if (scrollTop > lastScrollTop && !navbarHidden) { // If scrolling down and navbar is not already hidden
+            navbar.classList.add("navbar-hidden"); // Hide the navbar
+            navbarHidden = true;
+        } else if (scrollTop < lastScrollTop && navbarHidden) { // If scrolling up and navbar is hidden
+            navbar.classList.remove("navbar-hidden"); // Show the navbar
+            navbarHidden = false;
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    }, false);
+
+
+
+    // features
+
+</script>
+
+
+
+</html>
