@@ -8,6 +8,7 @@
     <title>CampusLink</title>
 
     <!-- external css -->
+     <link rel="stylesheet" href="./css_files/carousel.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- favicon -->
@@ -214,6 +215,48 @@
             </div>
         </div>
     </section>
+    
+    <!-- features detaiil section starts -->
+    <section id="carousel-wrapper">
+        <section id="carousel-slider">
+            <input type="radio" name="carousel-slider" id="c1">
+            <input type="radio" name="carousel-slider" id="c2" checked>
+            <input type="radio" name="carousel-slider" id="c3">
+            <!-- <input type="radio" name="carousel-slider" id="c4">
+            <input type="radio" name="carousel-slider" id="c5"> -->
+
+            <label for="c1" id="carousel-slide1">
+                <div class="slide-content">
+                    <h2>Enhanced Privacy & Security</h2>
+                    <p>CampusLink Portal is a secure and integrated platform designed to streamline the placement
+                        process for students, faculty, and recruiters...</p>
+                </div>
+            </label>
+
+            <label for="c2" id="carousel-slide2">
+                <div class="slide-content">
+                    <h2>Unified Placement Portal</h2>
+                    <p>CampusLink is an integrated platform designed to streamline the placement process...</p>
+                </div>
+            </label>
+
+            <label for="c3" id="carousel-slide3">
+                <div class="slide-content">
+                    <h2>Resource Hub for Campus</h2>
+                    <p>CampusLink is a comprehensive and secure resource hub designed to streamline campus placements...
+                    </p>
+                </div>
+            </label>
+
+            <!-- <label for="c4" id="carousel-slide4"></label>
+            <label for="c5" id="carousel-slide5"></label> -->
+
+            <!-- Navigation buttons -->
+            <button class="carousel-nav-button carousel-nav-left" onclick="prevCarouselSlide()">&#10094;</button>
+            <button class="carousel-nav-button carousel-nav-right" onclick="nextCarouselSlide()">&#10095;</button>
+        </section>
+    </section>
+    <!-- features detaiil section ends -->
 
 
     <!-- form -->
@@ -486,6 +529,7 @@
 
 
 </body>
+<script src="main.js"></script>
 <script>
     let lastScrollTop = 0;
     const navbar = document.getElementById('navbar');
