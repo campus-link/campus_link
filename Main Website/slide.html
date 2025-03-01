@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Carousel with Text Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            height: 70vh;
+            perspective: 1000px;
+        }
+
+        .d-slide {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .it {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            transition: transform 1s, background-color 1s, opacity 3s;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0.8;
+        }
+
+        .it h2 {
+            font-weight: 700;
+            font-family: Poppins, sans-serif;
+            font-size: 22px;
+            margin-bottom: .5rem;
+            color: rgb(255, 255, 255);
+        }
+
+        .it p {
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Initial Slide Positions */
+        .it:nth-child(1) {
+            background-color: rgb(166, 29, 55);
+            transform: translateX(0) scale(1);
+            z-index: 2;
+            opacity: 1;
+        }
+
+        .it:nth-child(2) {
+            background-color: rgb(26, 40, 68);
+            transform: translateX(120%) scale(0.8) rotateY(-20deg);
+            z-index: 1;
+        }
+
+        .it:nth-child(3) {
+            background-color: rgb(26, 40, 68);
+            transform: translateX(-120%) scale(0.8) rotateY(20deg);
+            z-index: 1;
+        }
+
+        /* Text Styling */
+        .it h2,
+        .it p {
+            opacity: 1;
+            transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation Buttons */
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .prev {
+            left: -40px;
+            background-color: white;
+        }
+
+        .next {
+            right: -40px;
+            background-color: white;
+        }
+
+        /* Responsive Fix */
+        @media (max-width: 500px) {
+            .carousel-container {
+                height: 90vh;
+            }
+
+            .it h2 {
+                font-size: 18px;
+            }
+
+            .it p {
+                font-size: 14px;
+                max-width: 90%;
+            }
+
+            button {
+                font-size: 1.5rem;
+                padding: 8px;
+            }
+
+            .prev {
+                left: -30px;
+            }
+
+            .next {
+                right: -30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div id="carousel3D" class="carousel d-slide">
+            <div class="carousel-item it">
+                <h2>Resource Hub for Campus</h2>
+                <p>CampusLink is a comprehensive and secure resource hub designed to streamline campus
+                    placements while ensuring enhanced privacy and data security. This platform serves as a centralized
+                    ecosystem where students can access placement opportunities, receive real-time updates from HR, and
+                    connect with industry professionals. It also features a secure resource-sharing system, allowing
+                    tutors to upload and distribute study materials while maintaining strict access controls.
+                    Additionally, an encrypted chat system enables seamless communication between students and faculty
+                    for doubt resolution. </p>
+            </div>
+            <div class="carousel-item it">
+                <h2>Unified Placement Portal</h2>
+                <p>CampusLink is an integrated platform designed to streamline the placement process for
+                    students, faculty, and recruiters. It serves as a one-stop solution where students can access
+                    placement opportunities, receive real-time updates from HR, and engage with industry professionals.
+                    The portal also includes a dedicated resource-sharing section, allowing tutors to upload study
+                    materials and notes while ensuring data privacy. Additionally, a built-in chat system enables
+                    seamless communication between students and faculty for doubt resolution.</p>
+            </div>
+            <div class="carousel-item it">
+                <h2>Enhanced Privacy & Security</h2>
+                <p>CampusLink Portal is a secure and integrated platform designed to streamline the placement
+                    process for students, faculty, and recruiters while ensuring enhanced privacy and data security. It
+                    provides a centralized hub where students can explore placement opportunities, receive real-time
+                    updates from HR, and connect with industry professionals. The platform features a secure
+                    resource-sharing system, allowing tutors to upload study materials and notes with strict access
+                    controls. Additionally, a privacy-focused chat system enables seamless communication between
+                    students and faculty for doubt resolution.</p>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+    </div>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".carousel-item");
+
+        function updateSlides() {
+            slides.forEach((slide, i) => {
+                let pos = (i - index + slides.length) % slides.length;
+
+                if (pos === 0) {  // Slide is at the center
+                    slide.style.transform = "translateX(0) scale(1)";
+                    slide.style.backgroundColor = "rgb(166, 29, 55)";
+                    slide.style.zIndex = "2";
+                    slide.style.opacity = "1";
+
+                    // Restart text animation
+                    slide.querySelector("h2").style.animation = "none";
+                    slide.querySelector("p").style.animation = "none";
+
+                    setTimeout(() => {
+                        slide.querySelector("h2").style.animation = "fadeInText 1.5s ease-in-out forwards";
+                        slide.querySelector("p").style.animation = "fadeInText 2s ease-in-out forwards";
+                    }, 200);
+                } else if (pos === 1) {  // Slide moves right
+                    slide.style.transform = "translateX(120%) scale(0.8) rotateY(-20deg)";
+                    slide.style.backgroundColor = "rgb(26, 40, 68)";
+                    slide.style.zIndex = "1";
+                    slide.style.opacity = "0.8";
+
+                    slide.querySelector("h2").style.animation = "none";
+                    slide.querySelector("p").style.animation = "none";
+                } else {  // Slide moves left
+                    slide.style.transform = "translateX(-120%) scale(0.8) rotateY(20deg)";
+                    slide.style.backgroundColor = "rgb(26, 40, 68)";
+                    slide.style.zIndex = "1";
+                    slide.style.opacity = "0.8";
+
+                    slide.querySelector("h2").style.animation = "none";
+                    slide.querySelector("p").style.animation = "none";
+                }
+            });
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            updateSlides();
+        }
+
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            updateSlides();
+        }
+
+        // Auto Slide Every 20 Seconds
+        setInterval(nextSlide, 20000);
+    </script>
+
+</body>
+
+</html>
