@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    
+
+        <!-- bootstarp cdn links starts here -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- bootstarp cdn links ends here -->
+
+        <style>
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 10px;
+                /* Width of the scrollbar */
+            }
+    
+            /* Scrollbar Track */
+            ::-webkit-scrollbar-track {
+                background: rgb(166, 29, 55);
+                /* Light background */
+                /* border-radius: 10px; */
+            }
+    
+            /* Scrollbar Handle */
+            ::-webkit-scrollbar-thumb {
+                /* border: 1px solid #000; */
+                background: rgb(26,40,68);
+                /* Blue color */
+                border-radius: 10px;
+            }
+    
+            /* Scrollbar Handle on Hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #2980b9;
+                /* Darker blue on hover */
+            }
+    
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+    
+            .navbar {
+                background: rgb(166, 29, 55);
+                color: white;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+    
+            .logo img {
+                height: 50px;
+                margin-right: 10px;
+                border-radius: 15px;
+                /* Makes the logo rounder */
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+                /* Stronger shadow */
+            }
+    
+            .logo-text {
+                font-style: italic;
+                font-size: 24px;
+                font-weight: bold;
+                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+                /* Stronger shadow */
+            }
+    
+            .menu {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                position: relative;
+            }
+    
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+    
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                left: 60%;
+                transform: translateX(-60%);
+                background-color: white;
+                color: black;
+                min-width: 200px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+                border-radius: 8px;
+                overflow: hidden;
+                z-index: 1000;
+            }
+    
+            .dropdown-content a {
+                color: black;
+                padding: 12px;
+                display: block;
+                text-decoration: none;
+                transition: background 0.3s;
+            }
+    
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+    
+            .dropdown-content hr {
+                margin: 5px 0;
+                border: none;
+                height: 1px;
+                background-color: #ccc;
+            }
+    
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+    
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .modal-content {
+                background-color: rgb(166, 29, 55);
+                color: white;
+                padding: 25px;
+                border-radius: 10px;
+                text-align: center;
+                width: 350px;
+                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+            }
+    
+            .close {
+                color: white;
+                float: right;
+                font-size: 24px;
+                cursor: pointer;
+            }
+    
+            .login-register-btn,
+            .features-btn,
+            .about-btn {
+                background-color: rgb(26, 40, 68) !important;
+                color: white;
+                border: none;
+                padding: 12px 18px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 6px;
+                transition: transform 0.2s;
+            }
+    
+            .login-register-btn:hover,
+            .features-btn:hover,
+            .about-btn:hover {
+                transform: scale(1.05);
+            }
+    
+            .modal button {
+                background-color: rgb(26, 40, 68);
+                color: white;
+                border: none;
+                padding: 12px;
+                cursor: pointer;
+                border-radius: 6px;
+                margin-top: 12px;
+                transition: transform 0.2s;
+            }
+    
+            .modal button:hover {
+                transform: scale(1.05);
+            }
+    
+            .forgot-password {
+                display: block;
+                margin-top: 12px;
+                color: white;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span class="logo-text">CampusLink</span>
+        </div>
+        <div class="menu">
+            <!-- <button class="features-btn"></button> -->
+            <button class="about-btn">Help</button>
+            <div class="dropdown">
+                <button class="login-register-btn">More ▼</button>
+                <div class="dropdown-content">
+                    <a onclick="openModal('Student')">Edit Profile</a>
+                    <a onclick="openModal('Teacher')">Log out</a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+   
+
+</body>
+
+</html>
