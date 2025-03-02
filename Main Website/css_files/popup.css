@@ -1,0 +1,111 @@
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(56, 56, 136, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.custom-modal-content {
+    background-color: #A61D37;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 40%;
+    padding-bottom: 30px;
+}
+
+.custom-close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.custom-close:hover,
+.custom-close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.custom-animate {
+    animation: custom-zoom 0.6s;
+}
+
+@keyframes custom-zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.custom-imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.custom-imgcontainer h1 {
+    color: white;
+}
+
+.custom-container input[type="text"],
+.custom-container input[type="password"] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.custom-container button {
+    background-color: #1A2844;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 20px;
+}
+
+.custom-container button:hover {
+    opacity: 0.8;
+}
+
+.custom-container a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    margin-right: 34px;
+    margin-top: 10px;
+}
+
+/* Fix Remember Me Alignment */
+.remember-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 26px;
+    gap: 10px;
+}
+
+.remember-container input[type="checkbox"] {
+    accent-color: white;
+    width: 16px;
+    height: 16px;
+}
+
+.remember-container label {
+    color: white;
+    font-weight: bold;
+}

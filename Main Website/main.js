@@ -34,3 +34,39 @@ function nextCarouselSlide() {
 window.onload = startAutoCarouselSlide;
 
 // end of feature section js code !!
+
+// popup section js files 
+
+
+// Open popups when clicked
+document.getElementById("studentLoginBtn").addEventListener("click", function () {
+    openPopup('student-login-modal');
+});
+
+document.getElementById("teacherLoginBtn").addEventListener("click", function () {
+    openPopup('teacher-login-modal');
+});
+
+document.getElementById("hrLoginBtn").addEventListener("click", function () {
+    openPopup('hr-login-modal');
+});
+
+// Function to open popup
+function openPopup(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+}
+
+// Function to close popup
+function closePopup(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Close popup when clicking outside
+window.onclick = function (event) {
+    let modals = document.querySelectorAll(".custom-modal");
+    modals.forEach(function (modal) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};

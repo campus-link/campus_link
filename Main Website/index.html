@@ -10,7 +10,7 @@
     <!-- external css -->
      <link rel="stylesheet" href="./css_files/carousel.css">
     <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="./css_files/popup.css">
     <!-- favicon -->
     <link rel="icon" href="assets/logo.png " type="jpeg">
 
@@ -54,18 +54,83 @@
                         <a class="nav-link " href="#">Features</a>
                     </li>
 
+                    <!-- Navigation Bar -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Login/Register
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Student Login</a></li>
-                            <li><a class="dropdown-item" href="#">Teacher Login</a></li>
+                            <li><a class="dropdown-item" href="#" id="studentLoginBtn">Student Login</a></li>
+                            <li><a class="dropdown-item" href="#" id="teacherLoginBtn">Teacher Login</a></li>
+                            <li><a class="dropdown-item" href="#" id="hrLoginBtn">HR Login</a></li>
                             <li><a class="dropdown-item" href="#form">Student Register</a></li>
-
                         </ul>
                     </li>
+                    
+
+<!-- Student Login Popup -->
+<!-- Student Login Popup -->
+<div id="student-login-modal" class="custom-modal">
+    <form class="custom-modal-content custom-animate">
+        <div class="custom-imgcontainer">
+            <span onclick="closePopup('student-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
+            <h1>Student Login</h1>
+        </div>
+        <div class="custom-container">
+            <input type="text" placeholder="Enter Username" name="uname">
+            <input type="password" placeholder="Enter Password" name="psw">
+            <div class="remember-container">
+                <input type="checkbox" id="studentRememberMe">
+                <label for="studentRememberMe">Remember me</label>
+            </div>
+            <button type="submit">Login</button>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </form>
+</div>
+
+<!-- Teacher Login Popup -->
+<div id="teacher-login-modal" class="custom-modal">
+    <form class="custom-modal-content custom-animate">
+        <div class="custom-imgcontainer">
+            <span onclick="closePopup('teacher-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
+            <h1>Teacher Login</h1>
+        </div>
+        <div class="custom-container">
+            <input type="text" placeholder="Enter Username" name="uname">
+            <input type="password" placeholder="Enter Password" name="psw">
+            <div class="remember-container">
+                <input type="checkbox" id="teacherRememberMe">
+                <label for="teacherRememberMe">Remember me</label>
+            </div>
+            <button type="submit">Login</button>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </form>
+</div>
+
+<!-- HR Login Popup -->
+<div id="hr-login-modal" class="custom-modal">
+    <form class="custom-modal-content custom-animate">
+        <div class="custom-imgcontainer">
+            <span onclick="closePopup('hr-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
+            <h1>HR Login</h1>
+        </div>
+        <div class="custom-container">
+            <input type="text" placeholder="Enter Username" name="uname">
+            <input type="password" placeholder="Enter Password" name="psw">
+            <div class="remember-container">
+                <input type="checkbox" id="hrRememberMe">
+                <label for="hrRememberMe">Remember me</label>
+            </div>
+            <button type="submit">Login</button>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </form>
+</div>
+
+
 
                 </ul>
             </div>
