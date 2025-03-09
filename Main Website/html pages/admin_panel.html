@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink Admin Panel</title>
+    <link rel="stylesheet" href="../css_files/admin_panel.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-title">CampusLink Admin Panel</div>
+        <div class="profile-section">
+<img src="../assets/user.png" alt="Profile" class="profile-icon" onclick="toggleProfileDropdown(event)">
+
+            <div class="profile-dropdown">
+                <a href="#">Profile</a>
+                <a href="#">Sign Out</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="hamburger" onclick="toggleSidebar()">☰</button>
+            <h2>CampusLink Admin</h2>
+            <ul>
+                <li onclick="showCategory('Users')">Users</li>
+                <li onclick="showCategory('Student')">Students</li>
+                <li onclick="showCategory('HR')">HR Users</li>
+                <li onclick="showCategory('Tutor')">Tutor Users</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h2 id="category-title">Users</h2>
+                <button class="add-user">Add New User</button>
+                <button class="delete-selected" onclick="deleteSelectedRows()">Delete Selected</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="select-all" onclick="toggleSelectAll()"></th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table">
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+</body>
+</html>
