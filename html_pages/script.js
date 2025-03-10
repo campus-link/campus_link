@@ -4,15 +4,28 @@ function toggleSidebar() {
     sidebar.classList.toggle("collapsed");
 }
 
-// Sample user data
-let usersData = [
-    { id: 1, name: "John Doe", email: "john@example.com", password: "password123", role: "Student" },
-    { id: 2, name: "Jane Smith", email: "jane@example.com", password: "password456", role: "HR" },
-    { id: 3, name: "Alice Johnson", email: "alice@example.com", password: "password789", role: "Tutor" },
-    { id: 4, name: "Bob Brown", email: "bob@example.com", password: "password101", role: "Student" }
-];
-
+// ✅ Move `currentCategory` to the top
 let currentCategory = "Users";
+
+// ✅ Move `usersData` initialization up
+let usersData = JSON.parse(localStorage.getItem("users")) || [];
+
+// ✅ Define function before calling it
+async function loadUsers() {
+    try {
+        if (usersData.length === 0) { // If no users in LocalStorage, fetch from JSON
+            let response = await fetch("../json/Users.json");
+            usersData = await response.json();
+            localStorage.setItem("users", JSON.stringify(usersData)); // Save to LocalStorage
+        }
+        showCategory("Users"); // ✅ Now it's safe to call
+    } catch (error) {
+        console.error("Error loading users:", error);
+    }
+}
+
+// ✅ Call function after defining it
+loadUsers();
 
 // Function to display users based on selected category
 function showCategory(category) {
@@ -27,7 +40,7 @@ function showCategory(category) {
         let newRow = document.createElement("tr");
         newRow.innerHTML = `
             <td><input type="checkbox" class="row-checkbox"></td>
-            <td>${user.id}</td>
+            <td contenteditable="false">${user.id}</td>
             <td contenteditable="false">${user.name}</td>
             <td contenteditable="false">${user.email}</td>
             <td contenteditable="false">${user.password}</td>
@@ -55,24 +68,26 @@ function toggleEditUser(button, userId) {
         nameCell.focus();
         button.innerText = "Save";
     } else {
+        let userIndex = usersData.findIndex(user => user.id === userId);
+        if (userIndex !== -1) {
+            usersData[userIndex].name = nameCell.innerText;
+            usersData[userIndex].email = emailCell.innerText;
+            usersData[userIndex].password = passwordCell.innerText;
+            localStorage.setItem("users", JSON.stringify(usersData)); // Save changes
+        }
+
         nameCell.contentEditable = false;
         emailCell.contentEditable = false;
         passwordCell.contentEditable = false;
         button.innerText = "Edit";
-
-        let user = usersData.find(user => user.id === userId);
-        if (user) {
-            user.name = nameCell.innerText;
-            user.email = emailCell.innerText;
-            user.password = passwordCell.innerText;
-        }
     }
 }
 
 // Function to delete a user
 function deleteUser(userId) {
     usersData = usersData.filter(user => user.id !== userId);
-    showCategory(currentCategory);
+    localStorage.setItem("users", JSON.stringify(usersData)); // Save changes
+    showCategory("Users");
 }
 
 // Function to toggle select all checkboxes
@@ -90,6 +105,7 @@ function deleteSelectedRows() {
         let userId = parseInt(row.children[1].innerText);
         usersData = usersData.filter(user => user.id !== userId);
     });
+    localStorage.setItem("users", JSON.stringify(usersData)); // Save changes
     showCategory(currentCategory);
 }
 
@@ -145,6 +161,7 @@ function saveNewUser(userId, button, fixedRole = null) {
 
     let newUser = { id: userId, name: nameCell, email: emailCell, password: passwordCell, role: selectedRole };
     usersData.push(newUser);
+    localStorage.setItem("users", JSON.stringify(usersData)); // Save to LocalStorage
 
     showCategory(currentCategory);
 }
@@ -160,6 +177,3 @@ profileSection.addEventListener("mouseenter", function () {
 profileSection.addEventListener("mouseleave", function () {
     profileDropdown.style.display = "none";
 });
-
-// Load all users by default
-showCategory("Users");

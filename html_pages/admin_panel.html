@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script defer src="auth.js" onload="checkAuth()"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampusLink Admin Panel</title>
@@ -17,7 +18,8 @@
 
             <div class="profile-dropdown">
                 <a href="#">Profile</a>
-                <a href="#">Sign Out</a>
+                <button onclick="logout()">Logout</button>
+
             </div>
         </div>
     </div>
