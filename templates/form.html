@@ -1,0 +1,65 @@
+<section id="form">
+    <div class="contact">
+        <div class="container reg">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div class="col-md-4 col-lg-6 text-center img-fluid d-md-block d-none">
+                        <img src="/static/images/try.png" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="heading">
+                        <h3 class="mb-2">Register Now</h3>
+                    </div>
+                    <div class="contact-form-area m-top-30">
+                        <form action="{{ url_for('reg_req') }}" method="post" class="contact_from" id="contact_from">
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <label class="font-weight" for="fullname">Full Name:</label>
+                                    <input type="text" name="fullname" placeholder="Full Name" id="contact_name"
+                                        pattern="^[A-Za-z\s]+$" required
+                                        title="Only letters and spaces are allowed"
+                                        style="height: 50px; width: 100%;">
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                    <label class="font-weight" for="email">Email:</label>
+                                    <input type="email" name="email" placeholder="Email" id="contact_email" required
+                                        style="height: 50px; width: 100%;">
+                                </div>
+
+                                <!-- Mobile Number -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                    <label class="font-weight" for="mobile">Mobile Number:</label>
+                                    <input type="tel" name="mobile" placeholder="Mobile Number" id="contact_mobile"
+                                        pattern="[0-9]{10}" required title="Enter a valid 10-digit mobile number"
+                                        style="height: 50px; width: 100%;">
+                                </div>
+
+                                <!-- Year of Admission -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                    <label class="font-weight" for="admission_year">Year of Admission:</label>
+                                    <input type="text" name="admission_year" placeholder="Year of Admission"
+                                        id="contact_admission_year" pattern="^[0-9]{4}$" required
+                                        title="Enter a valid 4-digit year (e.g., 2024)"
+                                        style="height: 50px; width: 100%;">
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                    <div class="btn-two-outer1">
+                                        <button class="btn" style="height: 50px; width: 100%;" type="submit"
+                                            name="submit-form"><span class="txt">Submit</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

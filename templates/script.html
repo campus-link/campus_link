@@ -1,0 +1,23 @@
+<script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let navbarHidden = false;
+
+    window.addEventListener("scroll", function () { // Listen for the scroll event
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the current vertical scroll position
+
+        if (scrollTop > lastScrollTop && !navbarHidden) { // If scrolling down and navbar is not already hidden
+            navbar.classList.add("navbar-hidden"); // Hide the navbar
+            navbarHidden = true;
+        } else if (scrollTop < lastScrollTop && navbarHidden) { // If scrolling up and navbar is hidden
+            navbar.classList.remove("navbar-hidden"); // Show the navbar
+            navbarHidden = false;
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    }, false);
+
+
+
+    // features
+
+</script>

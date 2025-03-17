@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusLink</title>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/logo1.png') }}" type="image/png">
+
+
+    {% include 'bootstrap.html' %}
+    <!--fafa-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    {% include 'carousel.html' %}
+    {% include 'welcome.html' %}
+    {% include 'what_we_do.html' %}
+    {% include 'form.html' %}
+    {% include 'hero_section.html' %}
+    {% include 'footer.html' %}
+</body>
+{% include 'script.html' %}
+</html>

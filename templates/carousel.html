@@ -1,0 +1,64 @@
+<!-- first sliding section -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active xyz">
+            <img src="/static/images/slide1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption xy ">
+                <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+                <h1> Resource Hub for Campus</h1>
+                <p>Seamless sharing of study materials, notes, and academic resources.</p>
+                <a href=""><button type="button" class="btn read btn-primary btn-lg ">Read More</button></a>
+
+            </div>
+        </div>
+        <div class="carousel-item xyz">
+            <img src="/static/images/slide2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption xy ">
+                <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+                <h1>Unified Placement Portal</h1>
+                <p>All job and internship opportunities in one centralized place.</p>
+                <a href=""><button type="button" class="btn read btn-primary btn-lg ">Read More</button></a>
+
+            </div>
+        </div>
+        <div class="carousel-item xyz">
+            <img src="/static/images/slide3.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption xy ">
+                <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+                <h1>Enhanced Privacy & Security</h1>
+                <p>Your personal data remains confidential—only you can access your details.</p>
+                <a href=""><button type="button" class="btn read btn-primary btn-lg ">Read More</button></a>
+
+            </div>
+            <div class="carousel-item xyz">
+    <img src="{{ url_for('static', filename='images/slide3.webp') }}" class="d-block w-100 img-fluid" alt="...">
+    <div class="carousel-caption xy">
+        <h4 class="d-none d-md-block">Your Campus, Your Career, Connected.</h4>
+        <h1>Enhanced Privacy & Security</h1>
+        <p>Your personal data remains confidential—only you can access your details.</p>
+        <a href=""><button type="button" class="btn read btn-primary btn-lg">Read More</button></a>
+    </div>
+</div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev" style="z-index: 999;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next" style="z-index: 999;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
