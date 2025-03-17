@@ -11,16 +11,14 @@ def home():
 
 @app.route("/registration_request", methods=["POST"])
 def reg_req():
-    data = request.form.to_dict()  # Convert form data to a dictionary
-    # insert_into_requested_users(data)
-    
-    # return render_template("thanku.html")
+    data = request.form.to_dict() 
+   
     result = insert_into_requested_users(data)
 
     if result == "Registration successful!":
-        return render_template("thanku.html")  # Redirect to thank-you page
+        return render_template("thanku.html")  
     else:
-        return render_template("reg_error.html")  # Show error if email already exists
+        return render_template("reg_error.html") 
 
 if __name__=="__main__":
     app.run(debug=True)
