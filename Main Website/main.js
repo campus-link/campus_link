@@ -70,3 +70,48 @@ window.onclick = function (event) {
         }
     });
 };
+
+
+//navbar
+
+let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let navbarHidden = false;
+
+    window.addEventListener("scroll", function () { // Listen for the scroll event
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the current vertical scroll position
+
+        if (scrollTop > lastScrollTop && !navbarHidden) { // If scrolling down and navbar is not already hidden
+            navbar.classList.add("navbar-hidden"); // Hide the navbar
+            navbarHidden = true;
+        } else if (scrollTop < lastScrollTop && navbarHidden) { // If scrolling up and navbar is hidden
+            navbar.classList.remove("navbar-hidden"); // Show the navbar
+            navbarHidden = false;
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    }, false);
+
+
+
+
+
+    // password and conform password check
+
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        var errorMessage = document.getElementById("password_error");
+
+        if (password !== confirmPassword) {
+            errorMessage.style.display = "block"; // Show error message
+            return false; // Prevent form submission
+        } else {
+            errorMessage.style.display = "none"; // Hide error message if passwords match
+            return true; // Allow form submission
+        }
+    }
+
+    // Real-time validation
+    document.getElementById("confirm_password").addEventListener("input", function () {
+        validatePassword();
+    });

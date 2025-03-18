@@ -8,9 +8,7 @@
     <title>CampusLink</title>
 
     <!-- external css -->
-     <link rel="stylesheet" href="./css_files/carousel.css">
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="./css_files/popup.css">
     <!-- favicon -->
     <link rel="icon" href="assets/logo.png " type="jpeg">
 
@@ -25,8 +23,7 @@
     <!--fafa-icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- javascript -->
-    <script src="script.js"></script>
+
 
 
 
@@ -51,7 +48,7 @@
                         <a class="nav-link " href="#team-section">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Features</a>
+                        <a class="nav-link " href="#carousel-wrapper ">Features</a>
                     </li>
 
                     <!-- Navigation Bar -->
@@ -67,68 +64,71 @@
                             <li><a class="dropdown-item" href="#form">Student Register</a></li>
                         </ul>
                     </li>
-                    
 
-<!-- Student Login Popup -->
-<!-- Student Login Popup -->
-<div id="student-login-modal" class="custom-modal">
-    <form class="custom-modal-content custom-animate">
-        <div class="custom-imgcontainer">
-            <span onclick="closePopup('student-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
-            <h1>Student Login</h1>
-        </div>
-        <div class="custom-container">
-            <input type="text" placeholder="Enter Username" name="uname">
-            <input type="password" placeholder="Enter Password" name="psw">
-            <div class="remember-container">
-                <input type="checkbox" id="studentRememberMe">
-                <label for="studentRememberMe">Remember me</label>
-            </div>
-            <button type="submit">Login</button>
-            <a href="#">Forgot Password?</a>
-        </div>
-    </form>
-</div>
 
-<!-- Teacher Login Popup -->
-<div id="teacher-login-modal" class="custom-modal">
-    <form class="custom-modal-content custom-animate">
-        <div class="custom-imgcontainer">
-            <span onclick="closePopup('teacher-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
-            <h1>Teacher Login</h1>
-        </div>
-        <div class="custom-container">
-            <input type="text" placeholder="Enter Username" name="uname">
-            <input type="password" placeholder="Enter Password" name="psw">
-            <div class="remember-container">
-                <input type="checkbox" id="teacherRememberMe">
-                <label for="teacherRememberMe">Remember me</label>
-            </div>
-            <button type="submit">Login</button>
-            <a href="#">Forgot Password?</a>
-        </div>
-    </form>
-</div>
+                    <!-- Student Login Popup -->
+                    <!-- Student Login Popup -->
+                    <div id="student-login-modal" class="custom-modal">
+                        <form class="custom-modal-content custom-animate">
+                            <div class="custom-imgcontainer">
+                                <span onclick="closePopup('student-login-modal')" class="custom-close"
+                                    title="Close PopUp">&times;</span>
+                                <h1>Student Login</h1>
+                            </div>
+                            <div class="custom-container">
+                                <input type="text" placeholder="Enter Email" name="uname">
+                                <input type="password" placeholder="Enter Password" name="psw">
+                                <div class="remember-container">
+                                    <input type="checkbox" id="studentRememberMe">
+                                    <label for="studentRememberMe">Remember me</label>
+                                </div>
+                                <button type="submit">Login</button>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
 
-<!-- HR Login Popup -->
-<div id="hr-login-modal" class="custom-modal">
-    <form class="custom-modal-content custom-animate">
-        <div class="custom-imgcontainer">
-            <span onclick="closePopup('hr-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
-            <h1>HR Login</h1>
-        </div>
-        <div class="custom-container">
-            <input type="text" placeholder="Enter Username" name="uname">
-            <input type="password" placeholder="Enter Password" name="psw">
-            <div class="remember-container">
-                <input type="checkbox" id="hrRememberMe">
-                <label for="hrRememberMe">Remember me</label>
-            </div>
-            <button type="submit">Login</button>
-            <a href="#">Forgot Password?</a>
-        </div>
-    </form>
-</div>
+                    <!-- Teacher Login Popup -->
+                    <div id="teacher-login-modal" class="custom-modal">
+                        <form class="custom-modal-content custom-animate">
+                            <div class="custom-imgcontainer">
+                                <span onclick="closePopup('teacher-login-modal')" class="custom-close"
+                                    title="Close PopUp">&times;</span>
+                                <h1>Teacher Login</h1>
+                            </div>
+                            <div class="custom-container">
+                                <input type="text" placeholder="Enter Username" name="uname">
+                                <input type="password" placeholder="Enter Password" name="psw">
+                                <div class="remember-container">
+                                    <input type="checkbox" id="teacherRememberMe">
+                                    <label for="teacherRememberMe">Remember me</label>
+                                </div>
+                                <button type="submit">Login</button>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- HR Login Popup -->
+                    <div id="hr-login-modal" class="custom-modal">
+                        <form class="custom-modal-content custom-animate">
+                            <div class="custom-imgcontainer">
+                                <span onclick="closePopup('hr-login-modal')" class="custom-close"
+                                    title="Close PopUp">&times;</span>
+                                <h1>HR Login</h1>
+                            </div>
+                            <div class="custom-container">
+                                <input type="text" placeholder="Enter Username" name="uname">
+                                <input type="password" placeholder="Enter Password" name="psw">
+                                <div class="remember-container">
+                                    <input type="checkbox" id="hrRememberMe">
+                                    <label for="hrRememberMe">Remember me</label>
+                                </div>
+                                <button type="submit">Login</button>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
 
 
 
@@ -199,7 +199,7 @@
     <!-- welcome -->
 
     <div class="container welcome">
-        <div class="row mb-4">
+        <div class="row my-4">
             <h1 class="center">Welcome To CampusLink</h1>
             <p class="jko">Your Campus, Your Career, Connected.</p><br>
             <p class="lj mb-4"><strong>CampusLink</strong> is your all-in-one platform for seamless learning and career
@@ -230,7 +230,7 @@
                         <p>
                             <i class="fa fa-star" style="    color: rgb(166, 29, 55);
                             font-size: 18px;"></i> &nbsp;
-                            <span>Classroom Resource Sharing </span> Easily upload and access notes.
+                            <span>Resource Sharing </span> Easily upload and access notes.
                         </p>
                     </div>
 
@@ -280,9 +280,9 @@
             </div>
         </div>
     </section>
-    
+
     <!-- features detaiil section starts -->
-    <section id="carousel-wrapper">
+    <section id="carousel-wrapper" style="margin-top: 4rem;">
         <section id="carousel-slider">
             <input type="radio" name="carousel-slider" id="c1">
             <input type="radio" name="carousel-slider" id="c2" checked>
@@ -293,22 +293,31 @@
             <label for="c1" id="carousel-slide1">
                 <div class="slide-content">
                     <h2>Enhanced Privacy & Security</h2>
-                    <p>CampusLink Portal is a secure and integrated platform designed to streamline the placement
-                        process for students, faculty, and recruiters...</p>
+                    <p>At CampusLink, we prioritize the privacy and security of our users, ensuring a safe and seamless
+                        experience for students, tutors, and recruiters. Our platform is built with advanced encryption
+                        protocols to protect sensitive data, including personal information, study materials, and
+                        placement details. We implement strict authentication mechanisms, ensuring only authorized users
+                        access confidential content. </p>
                 </div>
             </label>
 
             <label for="c2" id="carousel-slide2">
                 <div class="slide-content">
                     <h2>Unified Placement Portal</h2>
-                    <p>CampusLink is an integrated platform designed to streamline the placement process...</p>
+                    <p>The Unified Placement Portal by CampusLink is a comprehensive platform designed to simplify and
+                        streamline the recruitment process for students, educational institutions, and recruiters. It
+                        serves as a centralized hub where students can explore job opportunities, internships, and
+                        placement drives while seamlessly connecting with hiring companies. </p>
                 </div>
             </label>
 
             <label for="c3" id="carousel-slide3">
                 <div class="slide-content">
                     <h2>Resource Hub for Campus</h2>
-                    <p>CampusLink is a comprehensive and secure resource hub designed to streamline campus placements...
+                    <p>CampusLink’s Unified Placement Portal is a one-stop solution designed to streamline the
+                        recruitment process for students, educational institutions, and hiring companies. This platform
+                        bridges the gap between academia and industry by providing a centralized space for job postings,
+                        internship opportunities, and placement updates.
                     </p>
                 </div>
             </label>
@@ -326,72 +335,88 @@
 
     <!-- form -->
 
-    <section id="form">
+    <section id="form" style="margin-top: 8 ̰rem ;">
         <div class="contact">
             <div class="container reg">
                 <div class="row">
 
-                    <div class="col-lg-7 col-md-6  col-sm-12">
+                    <div class="col-lg-7 col-md-6  col-sm-12 text-center img-fluid  d-md-block d-none">
+                        <img src="assets/try.png" class="img-fluid" style="opacity: .5;">
 
-                        <div class="col-md-4 col-lg-6 text-center img-fluid  d-md-block d-none">
-                            <img src="assets/try.png" class="img-fluid">
-                        </div>
 
                     </div>
 
-
-                    <div class="col-lg-5 col-md-6  col-sm-12">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
                         <div class="heading">
                             <h3 class="mb-2">Register Now</h3>
-
                         </div>
                         <div class="contact-form-area m-top-30">
-
-                            <form action="" class="contact_from" id="contact_from">
+                            <form action="{{ url_for('reg_req') }}" method="post" class="contact_from" id="contact_from"
+                                onsubmit="return validatePassword()">
                                 <div class="row">
-                                    <div class="col-lg-12 axyz col-md-12 col-sm-12 ">
-                                        <label class="font-weight" for="fname">Name:</label><br>
-                                        <input type="text" name="name" placeholder="Name" style=" height: 50px;
-                                    width: 100%;" id="contact_name">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4 ">
-                                        <label class="font-weight" for="number">Your Phone:</label>
-                                        <input type="tel" name="number" placeholder="Number" style=" height: 50px;
-                                    width: 100%;" id="contact_number">
-
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4 ">
-                                        <label class="font-weight" for="subject">Subject:</label>
-                                        <input type="text" name="subject" placeholder="Subject" style=" height: 50px;
-                                    width: 100%;" id="contact_subject">
-
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4 ">
-                                        <label class="font-weight" for="subject">Email:</label>
-                                        <input type="email" name="subject" placeholder="Email" style=" height: 50px;
-                                    width: 100%;" id="contact_subject">
-
+                                    <!-- Full Name -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="font-weight" for="fullname">Full Name:</label>
+                                        <input type="text" name="fullname" placeholder="Full Name" id="contact_name"
+                                            pattern="^[A-Za-z\s]+$" required title="Only letters and spaces are allowed"
+                                            style="height: 50px; width: 100%;">
                                     </div>
 
+                                    <!-- Email -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                        <label class="font-weight" for="email">Email:</label>
+                                        <input type="email" name="email" placeholder="Email" id="contact_email" required
+                                            style="height: 50px; width: 100%;">
+                                    </div>
 
-                                    <div class=" col-lg-12 col-md-12 col-sm-12  mt-4 ">
+                                    <!-- Mobile Number -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                        <label class="font-weight" for="mobile">Mobile Number:</label>
+                                        <input type="tel" name="mobile" placeholder="Mobile Number" id="contact_mobile"
+                                            pattern="[0-9]{10}" required title="Enter a valid 10-digit mobile number"
+                                            style="height: 50px; width: 100%;">
+                                    </div>
 
-                                        <div class="btn-two-outer1 "><button class="btn "
-                                                style="height: 50px; width: 100%; " type="submit"
-                                                name="submit-form"><span class="txt">submit </span> </button>
+                                    <!-- Year of Admission -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                        <label class="font-weight" for="admission_year">Year of Admission:</label>
+                                        <input type="tel" name="admission_year" placeholder="Year of Admission"
+                                            id="contact_admission_year" pattern="^[0-9]{4}$" required
+                                            title="Enter a valid 4-digit year (e.g., 2024)"
+                                            style="height: 50px; width: 100%;">
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                        <label class="font-weight" for="password">Password:</label>
+                                        <input type="password" name="password" placeholder="Password" id="password"
+                                            pattern=".{4,}" required title="Password must be at least 4 characters long"
+                                            style="height: 50px; width: 100%;">
+                                    </div>
+
+                                    <!-- Confirm Password -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                        <label class="font-weight" for="confirm_password">Confirm Password:</label>
+                                        <input type="password" name="confirm_password" placeholder="Confirm Password"
+                                            id="confirm_password" required style="height: 50px; width: 100%;">
+                                        <span id="password_error" style="color: red; display: none;">Passwords do not
+                                            match!</span>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
+                                        <div class="btn-two-outer1">
+                                            <button class="btn" style="height: 50px; width: 100%;" type="submit"
+                                                name="submit-form"><span class="txt">Submit</span></button>
                                         </div>
-
                                     </div>
-
-
                                 </div>
+                            </form>
+
+
                         </div>
-
-                        </form>
-
-
-
                     </div>
+
                 </div>
 
             </div>
@@ -410,7 +435,7 @@
             <div class="team-container">
                 <div class="team-member">
                     <div class="image-container">
-                        <img src="assets/aniket.jpg" alt="Subham Panda">
+                        <img src="assets/subham.jpg" alt="Subham Panda">
                         <div class="overlay">
                             <h3>Subham Panda</h3>
                             <p>Team Leader</p>
@@ -424,11 +449,29 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="team-member">
                     <div class="image-container">
                         <img src="assets/sahil.jpeg" alt="Subham Panda">
                         <div class="overlay">
-                            <h3>Subham Panda</h3>
+                            <h3>S.K sahil</h3>
+                            <p>Team Leader</p>
+                            <p>Team Member</p>
+                            <div class="social-icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="assets/subham.jpg" alt="Subham Panda">
+                        <div class="overlay">
+                            <h3>Sidharat Swain</h3>
                             <p>Team Leader</p>
                             <p>Team Member</p>
                             <div class="social-icons">
@@ -444,7 +487,7 @@
                     <div class="image-container">
                         <img src="assets/Subrat.jpeg" alt="Subham Panda">
                         <div class="overlay">
-                            <h3>Subham Panda</h3>
+                            <h3>Subrat Sethi</h3>
                             <p>Team Leader</p>
                             <p>Team Member</p>
                             <div class="social-icons">
@@ -456,27 +499,12 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="team-member">
                     <div class="image-container">
-                        <img src="assets/subham.jpg" alt="Subham Panda">
+                        <img src="assets/aniket.jpg" alt="Subham Panda">
                         <div class="overlay">
-                            <h3>Subham Panda</h3>
-                            <p>Team Leader</p>
-                            <p>Team Member</p>
-                            <div class="social-icons">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="image-container">
-                        <img src="assets/subham.jpg" alt="Subham Panda">
-                        <div class="overlay">
-                            <h3>Subham Panda</h3>
+                            <h3>Aniket patra</h3>
                             <p>Team Leader</p>
                             <p>Team Member</p>
                             <div class="social-icons">
@@ -502,7 +530,7 @@
                         placement updates, tutor-student interaction, and seamless communication, ensuring efficient
                         learning and career growth for students and institutions.
                     </div>
-                    <div class="social-links">
+                    <div class="social-links mb-4">
                         <span>Follow on Socials </span><br>
                         <a href="#" target="_blank" class="fa fa-facebook"></a>
                         <a href="#" target="_blank" class="fa fa-twitter"></a>
@@ -601,31 +629,5 @@
 
 </body>
 <script src="main.js"></script>
-<script>
-    let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
-    let navbarHidden = false;
-
-    window.addEventListener("scroll", function () { // Listen for the scroll event
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the current vertical scroll position
-
-        if (scrollTop > lastScrollTop && !navbarHidden) { // If scrolling down and navbar is not already hidden
-            navbar.classList.add("navbar-hidden"); // Hide the navbar
-            navbarHidden = true;
-        } else if (scrollTop < lastScrollTop && navbarHidden) { // If scrolling up and navbar is hidden
-            navbar.classList.remove("navbar-hidden"); // Show the navbar
-            navbarHidden = false;
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-    }, false);
-
-
-
-    // features
-
-    
-</script>
-
-
 
 </html>
