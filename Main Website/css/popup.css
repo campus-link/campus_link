@@ -4,13 +4,13 @@
 .custom-modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 10000;
     left: 0;
-    top: 0;
+    top: 5rem;
     width: 100%;
-    height: 100%;
+    height: 85%;
     overflow: auto;
-    background-color: rgba(56, 56, 136, 0.3);
+    /* background-color: rgba(56, 56, 136, 0.3); */
     backdrop-filter: blur(5px);
 }
 
@@ -18,7 +18,7 @@
     background-color: #A61D37;
     margin: 4% auto 15% auto;
     border: 1px solid #888;
-    width: 40%;
+    width: 50%;
     padding-bottom: 30px;
 }
 
@@ -63,7 +63,7 @@
 .custom-container input[type="password"] {
     width: 90%;
     padding: 12px 20px;
-    margin: 8px 26px;
+    margin: 8px ;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -74,11 +74,11 @@
     background-color: #1A2844;
     color: white;
     padding: 14px 20px;
-    margin: 8px 26px;
+    margin: 8px;
     border: none;
     cursor: pointer;
     width: 90%;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .custom-container button:hover {
@@ -111,4 +111,36 @@
 .remember-container label {
     color: white;
     font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+    .custom-modal {
+        
+        height: 100%;
+        
+    }
+    .custom-modal-content {
+        width: 90%; /* Make it take up most of the screen */
+        max-width: 400px; /* Prevent it from being too wide */
+        margin: 10vh auto; /* Adjust vertical margin */
+        height: 60%;
+    }
+
+    /* .custom-container input[type="text"],
+    .custom-container input[type="password"],
+     .custom-container button {
+        width: 100%; 
+        margin: 8px auto; 
+    }  */
+
+    .custom-container a {
+        display: block; /* Prevent floating issues */
+        text-align: center; /* Center the text */
+        margin: 10px;
+    }
+
+    .custom-close {
+        right: 10px;
+        font-size: 30px;
+        top: -30px;
+    }
 }
