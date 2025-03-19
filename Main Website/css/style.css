@@ -459,6 +459,8 @@ input[type=password] {
 /* heros */
 
 /* General Styling */
+
+
 #team-section {
     text-align: center;
     padding: 50px 20px;
@@ -566,6 +568,16 @@ input[type=password] {
 
 .team-member:hover .overlay {
     top: 50%;
+}
+#team-section2{
+    display: none;
+}
+@media(min-width:768px){
+    #team-section2{
+        display: block!important;
+    }
+  
+
 }
 
 

@@ -9,9 +9,11 @@
 
     <!-- external css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/hero.css">
     <!-- favicon -->
     <link rel="icon" href="assets/logo.png " type="jpeg">
-    <link rel="stylesheet" href="css/popup.css">
+
 
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -71,71 +73,70 @@
         </div>
     </nav>
 
-    <section id ="login">
+    <section id="login">
 
-                    <!-- Student Login Popup -->
-                    <div id="student-login-modal" class="custom-modal">
-                        <form class="custom-modal-content custom-animate">
-                            <div class="custom-imgcontainer" >
-                                <span onclick="closePopup('student-login-modal')" class="custom-close"
-                                    title="Close PopUp">&times;</span>
-                                <h1>Student Login</h1>
-                            </div>
-                            <div class="custom-container"style="text-align: center;">
-                                <input type="text" placeholder="Enter Email" name="uname">
-                                <input type="password" placeholder="Enter Password" name="psw">
-                                <div class="remember-container">
-                                    <input type="checkbox" id="studentRememberMe">
-                                    <label for="studentRememberMe">Remember me</label>
-                                </div>
-                                <button type="submit">Login</button>
-                                <a href="#">Forgot Password?</a>
-                            </div>
-                        </form>
+        <!-- Student Login Popup -->
+        <div id="student-login-modal" class="custom-modal">
+            <form class="custom-modal-content custom-animate">
+                <div class="custom-imgcontainer">
+                    <span onclick="closePopup('student-login-modal')" class="custom-close"
+                        title="Close PopUp">&times;</span>
+                    <h1>Student Login</h1>
+                </div>
+                <div class="custom-container" style="text-align: center;">
+                    <input type="text" placeholder="Enter Email" name="uname">
+                    <input type="password" placeholder="Enter Password" name="psw">
+                    <div class="remember-container">
+                        <input type="checkbox" id="studentRememberMe">
+                        <label for="studentRememberMe">Remember me</label>
                     </div>
+                    <button type="submit">Login</button>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
 
-                    <!-- Teacher Login Popup -->
-                    <div id="teacher-login-modal" class="custom-modal">
-                        <form class="custom-modal-content custom-animate">
-                            <div class="custom-imgcontainer">
-                                <span onclick="closePopup('teacher-login-modal')" class="custom-close"
-                                    title="Close PopUp">&times;</span>
-                                <h1>Teacher Login</h1>
-                            </div>
-                            <div class="custom-container"style="text-align: center;">
-                                <input type="text" placeholder="Enter Username" name="uname">
-                                <input type="password" placeholder="Enter Password" name="psw">
-                                <div class="remember-container">
-                                    <input type="checkbox" id="teacherRememberMe">
-                                    <label for="teacherRememberMe">Remember me</label>
-                                </div>
-                                <button type="submit">Login</button>
-                                <a href="#">Forgot Password?</a>
-                            </div>
-                        </form>
+        <!-- Teacher Login Popup -->
+        <div id="teacher-login-modal" class="custom-modal">
+            <form class="custom-modal-content custom-animate">
+                <div class="custom-imgcontainer">
+                    <span onclick="closePopup('teacher-login-modal')" class="custom-close"
+                        title="Close PopUp">&times;</span>
+                    <h1>Teacher Login</h1>
+                </div>
+                <div class="custom-container" style="text-align: center;">
+                    <input type="text" placeholder="Enter Username" name="uname">
+                    <input type="password" placeholder="Enter Password" name="psw">
+                    <div class="remember-container">
+                        <input type="checkbox" id="teacherRememberMe">
+                        <label for="teacherRememberMe">Remember me</label>
                     </div>
+                    <button type="submit">Login</button>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
 
-                    <!-- HR Login Popup -->
-                    <div id="hr-login-modal" class="custom-modal">
-                        <form class="custom-modal-content custom-animate">
-                            <div class="custom-imgcontainer">
-                                <span onclick="closePopup('hr-login-modal')" class="custom-close"
-                                    title="Close PopUp">&times;</span>
-                                <h1>HR Login</h1>
-                            </div>
-                            <div class="custom-container"style="text-align: center;">
-                                <input type="text" placeholder="Enter Username" name="uname">
-                                <input type="password" placeholder="Enter Password" name="psw">
-                                <div class="remember-container">
-                                    <input type="checkbox" id="hrRememberMe">
-                                    <label for="hrRememberMe">Remember me</label>
-                                </div>
-                                <button type="submit">Login</button>
-                                <a href="#">Forgot Password?</a>
-                            </div>
-                        </form>
+        <!-- HR Login Popup -->
+        <div id="hr-login-modal" class="custom-modal">
+            <form class="custom-modal-content custom-animate">
+                <div class="custom-imgcontainer">
+                    <span onclick="closePopup('hr-login-modal')" class="custom-close" title="Close PopUp">&times;</span>
+                    <h1>HR Login</h1>
+                </div>
+                <div class="custom-container" style="text-align: center;">
+                    <input type="text" placeholder="Enter Username" name="uname">
+                    <input type="password" placeholder="Enter Password" name="psw">
+                    <div class="remember-container">
+                        <input type="checkbox" id="hrRememberMe">
+                        <label for="hrRememberMe">Remember me</label>
                     </div>
-                </section>
+                    <button type="submit">Login</button>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </section>
 
 
 
@@ -431,91 +432,194 @@
                 <h6 class="d-none d-md-block">A team of dedicated professionals committed to excellence and innovation.
                 </h6>
             </div>
-            <div class="team-container">
-                <div class="team-member">
-                    <div class="image-container">
-                        <img src="assets/subham.jpg" alt="Subham Panda">
-                        <div class="overlay">
-                            <h3>Subham Panda</h3>
-                            <p>Team Leader</p>
-                            <p>Team Member</p>
-                            <div class="social-icons">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
+            <section id="team-section2">
+                <div class="team-container">
+                    <div class="team-member">
+                        <div class="image-container">
+                            <img src="assets/subham.jpg" alt="Subham Panda">
+                            <div class="overlay">
+                                <h3>Subham Panda</h3>
+                                <p>Team Leader</p>
+                                <div class="social-icons">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="team-member">
-                    <div class="image-container">
-                        <img src="assets/sahil.jpeg" alt="Subham Panda">
-                        <div class="overlay">
-                            <h3>S.K sahil</h3>
-                            <p>Team Leader</p>
-                            <p>Team Member</p>
-                            <div class="social-icons">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
+                    <div class="team-member">
+                        <div class="image-container">
+                            <img src="assets/sahil.jpeg" alt="Subham Panda">
+                            <div class="overlay">
+                                <h3>S.K sahil</h3>
+                                <p>Team Leader</p>
+                                <div class="social-icons">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="team-member">
-                    <div class="image-container">
-                        <img src="assets/subham.jpg" alt="Subham Panda">
-                        <div class="overlay">
-                            <h3>Sidharat Swain</h3>
-                            <p>Team Leader</p>
-                            <p>Team Member</p>
-                            <div class="social-icons">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
+                    <div class="team-member">
+                        <div class="image-container">
+                            <img src="assets/subham.jpg" alt="Subham Panda">
+                            <div class="overlay">
+                                <h3>Sidharat Swain</h3>
+                                <p>Team Leader</p>
+                                <div class="social-icons">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="image-container">
-                        <img src="assets/Subrat.jpeg" alt="Subham Panda">
-                        <div class="overlay">
-                            <h3>Subrat Sethi</h3>
-                            <p>Team Leader</p>
-                            <p>Team Member</p>
-                            <div class="social-icons">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
+                    <div class="team-member">
+                        <div class="image-container">
+                            <img src="assets/Subrat.jpeg" alt="Subham Panda">
+                            <div class="overlay">
+                                <h3>Subrat Sethi</h3>
+                                <p>Team Leader</p>
+                                <div class="social-icons">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="team-member">
-                    <div class="image-container">
-                        <img src="assets/aniket.jpg" alt="Subham Panda">
-                        <div class="overlay">
-                            <h3>Aniket patra</h3>
-                            <p>Team Leader</p>
-                            <p>Team Member</p>
-                            <div class="social-icons">
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
+                    <div class="team-member">
+                        <div class="image-container">
+                            <img src="assets/aniket.jpg" alt="Subham Panda">
+                            <div class="overlay">
+                                <h3>Aniket patra</h3>
+                                <p>Team Leader</p>
+                                <div class="social-icons">
+                                    <i class="fa fa-facebook"></i>
+                                    <i class="fa fa-twitter"></i>
+                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-instagram"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
+            </section>
+
+            <section id="team-section3">
+                <div id="teamSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="member-card">
+                                <div class="photo-box">
+                                    <img src="assets/subham.jpg" alt="Subham Panda">
+                                    <div class="info-overlay">
+                                        <h3>Subham Panda</h3>
+                                        <p>Team Leader</p>
+                                        <div class="social-links">
+                                            <i class="fa fa-facebook"></i>
+                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-linkedin"></i>
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="member-card">
+                                <div class="photo-box">
+                                    <img src="assets/sahil.jpeg" alt="S.K Sahil">
+                                    <div class="info-overlay">
+                                        <h3>S.K Sahil</h3>
+                                        <p>Team Leader</p>
+                                        <div class="social-links">
+                                            <i class="fa fa-facebook"></i>
+                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-linkedin"></i>
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="member-card">
+                                <div class="photo-box">
+                                    <img src="assets/aniket.jpg" alt="Sidharat Swain">
+                                    <div class="info-overlay">
+                                        <h3>Sidharat Swain</h3>
+                                        <p>Team Leader</p>
+                                        <div class="social-links">
+                                            <i class="fa fa-facebook"></i>
+                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-linkedin"></i>
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="member-card">
+                                <div class="photo-box">
+                                    <img src="assets/Subrat.jpeg" alt="Sidharat Swain">
+                                    <div class="info-overlay">
+                                        <h3>Subrat Sethi</h3>
+                                        <p>Team Leader</p>
+                                        <div class="social-links">
+                                            <i class="fa fa-facebook"></i>
+                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-linkedin"></i>
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="member-card">
+                                <div class="photo-box">
+                                    <img src="assets/aniket.jpg" alt="Sidharat Swain">
+                                    <div class="info-overlay">
+                                        <h3>Aniket Patra</h3>
+                                        <p>Team Leader</p>
+                                        <div class="social-links">
+                                            <i class="fa fa-facebook"></i>
+                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-linkedin"></i>
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+ 
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#teamSlider"
+                        data-bs-slide="prev" style="color: black;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#teamSlider"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            </div>
+            </section>
         </div>
     </section>
 
