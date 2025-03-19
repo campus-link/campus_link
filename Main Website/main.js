@@ -73,26 +73,37 @@ window.onclick = function (event) {
 
 
 //navbar
-
 let lastScrollTop = 0;
-    const navbar = document.getElementById('navbar');
-    let navbarHidden = false;
+const navbar = document.getElementById('navbar');
+const dropdownMenu = document.querySelector('.dropdown-menu'); // Select dropdown
+const navbarToggler = document.querySelector('.navbar-toggler'); // Select the navbar toggle button
+const navbarCollapse = document.querySelector('.navbar-collapse'); // Select the collapsible navbar
+let navbarHidden = false;
 
-    window.addEventListener("scroll", function () { // Listen for the scroll event
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the current vertical scroll position
+window.addEventListener("scroll", function () { 
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
 
-        if (scrollTop > lastScrollTop && !navbarHidden) { // If scrolling down and navbar is not already hidden
-            navbar.classList.add("navbar-hidden"); // Hide the navbar
-            navbarHidden = true;
-        } else if (scrollTop < lastScrollTop && navbarHidden) { // If scrolling up and navbar is hidden
-            navbar.classList.remove("navbar-hidden"); // Show the navbar
-            navbarHidden = false;
+    if (scrollTop > lastScrollTop && !navbarHidden) { 
+        navbar.classList.add("navbar-hidden"); 
+        
+        // Close dropdown menu if open
+        if (dropdownMenu && dropdownMenu.classList.contains("show")) {
+            dropdownMenu.classList.remove("show"); 
         }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-    }, false);
 
+        // Close navbar if open (on small screens)
+        if (navbarCollapse.classList.contains("show")) {
+            navbarToggler.click(); // Simulate a click to close the navbar
+        }
 
-
+        navbarHidden = true;
+    } else if (scrollTop < lastScrollTop && navbarHidden) { 
+        navbar.classList.remove("navbar-hidden"); 
+        navbarHidden = false;
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}, false);
 
 
     // password and conform password check
