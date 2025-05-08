@@ -9,16 +9,18 @@ const jwt = require('jsonwebtoken');
 const http = require('http');
 const socketIo = require('socket.io');
 const router = express.Router();
-// const path = require('path');
+// const quickAccessRoutes = require('./routes/quickAccessRoutes'); // Include the new routes file
 
 const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+
+// Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 
-const server = http.createServer(app);
-const io = socketIo(server);
-
+// MySQL Connection
 console.log("DB_HOST:", process.env.DB_HOST);
 console.log("DB_USER:", process.env.DB_USER);
 console.log("DB_NAME:", process.env.DB_NAME);
@@ -36,6 +38,16 @@ db.connect(err => {
         process.exit(1);
     }
     console.log('✅ MySQL Connected...');
+});
+
+// Pass db to chatRoutes
+const chatRoutes = require('./routes/chatRoutes');
+chatRoutes.db = db; // inject db manually if needed
+app.use('/api', chatRoutes);
+
+// Optional: Example base route
+app.get('/', (req, res) => {
+    res.send("CampusLink backend is running");
 });
 
 
@@ -289,6 +301,10 @@ app.get('/admin/groups', (req, res) => {
     });
   });
 
+  
+  
+  
+
   //message send
 
   router.get('/teacher/groups/:teacherId', async (req, res) => {
@@ -509,10 +525,13 @@ app.post('/user/login', (req, res) => {
             success: true,
             token,
             role: user.role,
+            userId: user.id,
             redirect: `/${user.role}-dashboard.html`
         });
     });
 });
+
+
 
 
 
